@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-</head>
-<style>
-    body {
+    <style>
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -17,51 +16,105 @@
             margin: 0 auto;
         }
 
-        .image {
+        .product {
+            float: left;
+            width: 45%; /* Adjust width as needed */
+            margin-right: 5%; /* Add margin between products */
             margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product:last-child {
+            margin-right: 0; /* Remove margin from last product */
         }
 
         .product img {
-            width: 20%;
+            width: 100%;
             height: auto;
             padding: 10px;
-            padding-bottom: 0%;
         }
-</style>
+
+        .price {
+            color: #333;
+            font-weight: bold;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
 <body>
-    <h2>Gallery</h2>
-    <h3>Necklaces</h3>
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contactus.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="gallery">
+        <h2>Gallery</h2>
+        <h3>Necklaces</h3>
 
-    <div class="product">
-        <img src="Images/Jewelry/Necklaces/Necklace1.jpg" alt="Necklace 1">
-        <p class="price">$99.99</p>
+        <div class="product">
+            <img src="Images/Jewelry/Necklaces/Necklace1.jpg" alt="Necklace 1">
+            <p class="price">$99.99</p>
+        </div>
+
+        <div class="product">
+            <img src="Images/Jewelry/Necklaces/Necklace2.jpg" alt="Necklace 2">
+            <p class="price">$99.99</p>
+        </div>
+
+        <div class="product">
+            <img src="Images/Jewelry/Necklaces/Necklace3.jpg" alt="Necklace 3">
+            <p class="price">$99.99</p>
+        </div>
+
+        <div class="product">
+            <img src="Images/Jewelry/Necklaces/Necklace4.jpg" alt="Necklace 4">
+            <p class="price">$99.99</p>
+        </div>
+
+        <div class="product">
+            <img src="Images/Jewelry/Necklaces/Necklace5.jpg" alt="Necklace 5">
+            <p class="price">$99.99</p>
+        </div>
+
+        <div class="product">
+            <img src="Images/Jewelry/Necklaces/Necklace6.jpg" alt="Necklace 6">
+            <p class="price">$99.99</p>
+        </div>
     </div>
-
-    <div class="product">
-        <img src="Images/Jewelry/Necklaces/Necklace2.jpg" alt="" style="float: right;">
-        <p class="price" style="float: right;">$99.99</p>
-    </div>
-
-    <div class="product">
-        <img src="Images/Jewelry/Necklaces/Necklace3.jpg" alt="">
-        <p class="price" >$99.99</p>
-    </div>
-
-    <div class="product">
-        <img src="Images/Jewelry/Necklaces/Necklace4.jpg" alt="" style="float: right;">
-        <p class="price"style="float: right;">$99.99</p>
-    </div>
-
-    <div class="product">
-        <img src="Images/Jewelry/Necklaces/Necklace5.jpg" alt="">
-        <p class="price">$99.99</p>
-    </div>
-
-    <div class="product">
-        <img src="Images/Jewelry/Necklaces/Necklace6.jpg" alt="" style="float: right;">
-        <p class="price" style="float: right;">$99.99</p>
-    </div>
-
-
 </body>
 </html>
