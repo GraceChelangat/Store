@@ -4,78 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+    <link rel="stylesheet" href="styles.css">
 
+    <style>
         .gallery {
             max-width: 800px;
             margin: 0 auto;
+            padding-bottom: 2px;
         }
 
-        .product {
-            float: left;
-            width: 45%; /* Adjust width as needed */
-            margin-right: 5%; /* Add margin between products */
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .product:last-child {
-            margin-right: 0; /* Remove margin from last product */
-        }
-
-        .product img {
-            width: 100%;
-            height: auto;
-            padding: 10px;
-        }
-
-        .price {
-            color: #333;
-            font-weight: bold;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-top: 20px;
         }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
+        .product {
+            width: 48%; /* Adjust width as needed */
+            margin-bottom: 20px;
             text-align: center;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            background-color: #E6E6FA;
         }
-        
+
+        .product img {
+            width: 60%;
+            height: auto;
+            padding: 1px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -94,37 +55,38 @@
         </nav>
     </header>
     <div class="gallery">
-        <h2>Gallery</h2>
         <h3>Necklaces</h3>
 
-        <div class="product">
-            <img src="Images/Jewelry/Necklaces/Necklace1.jpg" alt="Necklace 1">
-            <p class="price">$99.99</p>
-        </div>
+        <div class="product-container">
+            <div class="product">
+                <img src="Images/Jewelry/Necklaces/Necklace1.jpg" alt="Necklace 1">
+                <p class="price">price = $99.99</p>
+            </div>
 
-        <div class="product">
-            <img src="Images/Jewelry/Necklaces/Necklace2.jpg" alt="Necklace 2">
-            <p class="price">$99.99</p>
-        </div>
+            <div class="product">
+                <img src="Images/Jewelry/Necklaces/Necklace2.jpg" alt="Necklace 2">
+                <p class="price">price = $99.99</p>
+            </div>
 
-        <div class="product">
-            <img src="Images/Jewelry/Necklaces/Necklace3.jpg" alt="Necklace 3">
-            <p class="price">$99.99</p>
-        </div>
+            <div class="product">
+                <img src="Images/Jewelry/Necklaces/Necklace3.jpg" alt="Necklace 3">
+                <p class="price">price = $99.99</p>
+            </div>
 
-        <div class="product">
-            <img src="Images/Jewelry/Necklaces/Necklace4.jpg" alt="Necklace 4">
-            <p class="price">$99.99</p>
-        </div>
+            <div class="product">
+                <img src="Images/Jewelry/Necklaces/Necklace4.jpg" alt="Necklace 4">
+                <p class="price">price = $99.99</p>
+            </div>
 
-        <div class="product">
-            <img src="Images/Jewelry/Necklaces/Necklace5.jpg" alt="Necklace 5">
-            <p class="price">$99.99</p>
-        </div>
+            <div class="product">
+                <img src="Images/Jewelry/Necklaces/Necklace5.jpg" alt="Necklace 5">
+                <p class="price">price = $99.99</p>
+            </div>
 
-        <div class="product">
-            <img src="Images/Jewelry/Necklaces/Necklace6.jpg" alt="Necklace 6">
-            <p class="price">$99.99</p>
+            <div class="product">
+                <img src="Images/Jewelry/Necklaces/Necklace6.jpg" alt="Necklace 6">
+                <p class="price">price = $99.99</p>
+            </div>
         </div>
     </div>
 
