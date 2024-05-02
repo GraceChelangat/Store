@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+        
+    h2 {
+        color: #d4c6f7;
+        margin-top: 30px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #6b5b95;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #563d7c;
+    }
+
+</style>
+</head>
+<!--Begining of header-->
+<body style="background-image: url(Images/Background/Background7.jpg);">
+<header>
+    <h1>Silly Sparkles</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Contactus.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<div>
+    <h2>Already have an account? Welcome back you are just a few steps away</h2>
+    <p style="color: #d4c6f7;">
+        Kindly enter your username and password!!
+    </p>
+
+    <form action="">
+        <label for="Fn">Fullname: </label>
+        <input type="text" id="Fn" placeholder="Fullname"><br><br>
+
+        <label for="Email Address">Email: </label>
+        <input type="email" id="eml" placeholder="Email Address"><br><br>
+
+        <label for="Password">Password: </label>
+        <input type="password" id="psd" placeholder="Password"><br><br>
+
+        <input type="submit" value="Sign in">
+
+</div>
+    
+</body>
+</html>
