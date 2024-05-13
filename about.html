@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--This meta tag makes my site responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Silly Sparkles</title>
     <link rel="stylesheet" href="CSS/styles.css">
@@ -12,8 +11,6 @@
             margin-top: 40px;
             display: flex;
             align-items: center;
-            
-
         }
 
         .profiles {
@@ -21,7 +18,6 @@
             grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
             gap: 40px;
             margin-top: 40px;
-
         }
 
         .profile img {
@@ -33,11 +29,34 @@
         .profile-info {
             color: white;
         }
-    </style>
 
+        /* Collapsible content */
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            display: none;
+            padding: 0 18px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            color: black;
+        }
+    </style>
 </head>
 <body style="background-image: url(Images/Background/Background7.jpg);">
-    <!--Begining of header-->
     <header>
         <h1>Silly Sparkles</h1>
         <nav>
@@ -49,53 +68,67 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="FAQ.html">FAQ</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="signin.html">Sign in</a></li>
-                <li><a href="signup.html">Sign up</a></li>
+                <div class="topnav-right">
+                    <a href="signUp.html">Sign Up</a>
+                    <a href="signIn.html">Sign In</a>
+                </div>
             </ul>
         </nav>
- 
     </header>
-
-    <!--Beggining of about us-->
 
     <main style="padding: 20px;">
         <section class="about" style="color: rgb(248, 247, 246);">
             <h2>About Us</h2>
-            <p >Welcome to Silly Sparkles, where every piece tells a story. We are passionate about crafting unique and stunning jewelry that reflects the individuality and style of our customers. Our journey began with a vision to create a space where creativity, quality, and affordability intersect, offering a diverse range of jewelry pieces suitable for every occasion.
-                At Silly Sparkles, we believe that jewelry is more than just an accessory; it's an expression of personality and emotion. That's why we handpick each gemstone, pearl, and metal to ensure the highest standards of craftsmanship and design. Whether you're looking for a statement necklace, elegant earrings, or a delicate bracelet, our collection has something for everyone.
-                Customer satisfaction is at the heart of everything we do. From our hassle-free shopping experience to our dedicated customer support team, we strive to exceed your expectations at every turn. We want you to feel confident and empowered wearing our jewelry, knowing that each piece is a reflection of your unique style and taste.
-                Thank you for choosing Silly Sparkles for your jewelry needs. Join us on this sparkling journey and let us help you shine bright, one piece at a time.
-            </p>
+            <p>Welcome to Silly Sparkles, where every piece tells a story. We are passionate about crafting unique and stunning jewelry that reflects the individuality and style of our customers. Our journey began with a vision to create a space where creativity, quality, and affordability intersect, offering a diverse range of jewelry pieces suitable for every occasion. At Silly Sparkles, we believe that jewelry is more than just an accessory; it's an expression of personality and emotion. That's why we handpick each gemstone, pearl, and metal to ensure the highest standards of craftsmanship and design. Whether you're looking for a statement necklace, elegant earrings, or a delicate bracelet, our collection has something for everyone. Customer satisfaction is at the heart of everything we do. From our hassle-free shopping experience to our dedicated customer support team, we strive to exceed your expectations at every turn. We want you to feel confident and empowered wearing our jewelry, knowing that each piece is a reflection of your unique style and taste. Thank you for choosing Silly Sparkles for your jewelry needs. Join us on this sparkling journey and let us help you shine bright, one piece at a time.</p>
 
-                        <!-- Profiles of two ladies -->
-                        <div class="profiles">
-                        <div class="profile">
-                            <img src="Images/Profiles/tarzine-jackson.jpg" alt="Lady 1">
-                            <div class="profile-info">
-                                <h3>Jessica Smith</h3>
-                                <p>Lead Jewelry Designer</p>
-                                <p>With over 10 years of experience in jewelry design, Jessica brings creativity and innovation to Silly Sparkles.</p>
-                            </div>
+            <!-- Profiles of two ladies -->
+            <div class="profiles">
+                <div class="profile">
+                    <img src="Images/Profiles/tarzine-jackson.jpg" alt="Lady 1">
+                    <div class="profile-info">
+                        <h3>Jessica Smith</h3>
+                        <button class="collapsible">Show info</button>
+                        <div class="content">
+                            <p>Lead Jewelry Designer</p>
+                            <p>With over 10 years of experience in jewelry design, Jessica brings creativity and innovation to Silly Sparkles.</p>
                         </div>
-            
-                        <div class="profile">
-                            <img src="Images/Profiles/david-florin.jpg" alt="Lady 2">
-                            <div class="profile-info">
-                                <h3>Emily Johnson</h3>
-                                <p>Customer Relations Manager</p>
-                                <p>Emily ensures that every customer has a delightful experience with Silly Sparkles from start to finish.</p>
-                            </div>
-                        </div>
-                        </div>
+                    </div>
+                </div>
 
+                <div class="profile">
+                    <img src="Images/Profiles/david-florin.jpg" alt="Lady 2">
+                    <div class="profile-info">
+                        <h3>Emily Johnson</h3>
+                        <button class="collapsible">Show info</button>
+                        <div class="content">
+                            <p>Customer Relations Manager</p>
+                            <p>Emily ensures that every customer has a delightful experience with Silly Sparkles from start to finish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
-    <!--Beggining of footer-->
 
     <footer>
         <p>&copy; 2024 Silly Sparkles. All rights reserved.</p>
     </footer>
 
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
