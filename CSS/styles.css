@@ -1,3 +1,11 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     background-size: cover;
@@ -6,6 +14,7 @@ body {
     text-align: center;
 }
 
+/* Header styles */
 header {
     background-color: #333;
     color: #fff;
@@ -13,6 +22,7 @@ header {
     text-align: center;
 }
 
+/* Navigation styles */
 nav {
     margin-top: 20px;
     text-align: left;
@@ -33,25 +43,59 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
 }
-.topnav-right{
-    float:right;
+
+.topnav-right {
+    float: right;
     text-decoration: none;
     color: #fff;
 }
 
+/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 2px;
+    padding: 10px;
     width: 100%;
-    /*position: fixed;*/
+    position: fixed;
     bottom: 0;
 }
 
-section.faq{
+/* FAQ section styles */
+section.faq {
     color: aliceblue;
-
 }
 
-/* Add additional styling as needed */
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav {
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .topnav-right {
+        float: none;
+    }
+}
+
+/* Hover effects */
+nav ul li a:hover,
+.topnav-right:hover,
+header a:hover {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    background-color: #555;
+}
+
+/* Additional styles */
+body {
+    line-height: 1.6;
+}
+
+footer {
+    border-top: 1px solid #666;
+}
